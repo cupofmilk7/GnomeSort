@@ -1,0 +1,3 @@
+/Users/macbookpro15/CLionProjects/GnomeSort/cmake-build-debug/CMakeFiles/GnomeSort.dir
+/Users/macbookpro15/CLionProjects/GnomeSort/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/macbookpro15/CLionProjects/GnomeSort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
