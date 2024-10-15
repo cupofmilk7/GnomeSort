@@ -109,6 +109,7 @@ void addToFile(vector <int>& v) {
 	    for (int i = 0; i < v.size(); i++) {
 	        file << v[i] << endl;
 	    }
+	    cout << "File opening successful" << endl;
 	}
 	else {
 		cout << "Error" << endl;

@@ -10,6 +10,8 @@
 #include "fileFunctions.h"
 
 std::vector<int> randomArray();
+std::vector<int> enterArray();
+
 void menu() {
     std::vector<int> vectorNums;
     int choice = 0;
@@ -19,10 +21,11 @@ void menu() {
                 << "2. Create a new array (random values)" << std::endl
                 << "3. Delete an array" << std::endl
                 << "4. Save an array in file" << std::endl
+                << "5. Enter an array" << std::endl
                 << "0. Exit" << std::endl;
         choice = checkInt();
-        while (choice < 0 || choice > 4) {
-            std::cout << "Enter choice (0-4): ";
+        while (choice < 0 || choice > 5) {
+            std::cout << "Enter choice (0-5): ";
             choice = checkInt();
         }
         switch (choice) {
@@ -69,6 +72,13 @@ void menu() {
             case 4:
                 addToFile(vectorNums);
                 break;
+            case 5:
+                vectorNums = enterArray();
+                std::cout << "Array: ";
+                for (int i = 0; i < vectorNums.size(); ++i) {
+                    std::cout << vectorNums[i] << " ";
+                }
+                break;
             case 0:
                 break;
         }
@@ -89,6 +99,19 @@ std::vector<int> randomArray() {
 
     for (int i = 0; i < size; ++i) {
         tempVector[i] = std::rand() % 100;
+    }
+    return tempVector;
+}
+
+std::vector<int> enterArray() {
+    std::cout << "Enter an array size: " << std::endl;
+    int size = checkInt();
+    while (size < 0) {
+        size = checkInt();
+    }
+    std::vector<int> tempVector(size);
+    for(int i = 0; i < size; ++i) {
+        tempVector[i] = checkInt();
     }
     return tempVector;
 }
