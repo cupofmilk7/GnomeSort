@@ -5,10 +5,13 @@
 
 #include "checkData.h"
 #include "sort.h"
+#include "arrayWork.h"
+
+#include "fileFunctions.h"
 
 std::vector<int> randomArray();
 void menu() {
-    std::vector<int> v;
+    std::vector<int> vectorNums;
     int choice = 0;
 
     do {
@@ -18,25 +21,25 @@ void menu() {
                 << "4. Save an array in file" << std::endl
                 << "0. Exit" << std::endl;
         choice = checkInt();
-        while (choice < 0 || choice > 3) {
-            std::cout << "Enter choice (0-3): ";
+        while (choice < 0 || choice > 4) {
+            std::cout << "Enter choice (0-4): ";
             choice = checkInt();
         }
         switch (choice) {
             case 1:
-                if (v.empty()) {
+                if (vectorNums.empty()) {
                     std::cout << "Empty array" << std::endl;
                     break;
                 }
-                sort(v);
+                sort(vectorNums);
                 std::cout << "Sorted array:" << std::endl;
-                for (int i = 0; i < v.size(); ++i) {
-                    std::cout << v[i] << " ";
+                for (int i = 0; i < vectorNums.size(); ++i) {
+                    std::cout << vectorNums[i] << " ";
                 }
                 std::cout << std::endl;
                 break;
             case 2:
-                if(!v.empty()) {
+                if(!vectorNums.empty()) {
                     std::cout << "Array is not empty, overwrite it?" << std::endl
                         << "1. Yes, 2. No" << std::endl;
                     int choiceOverwrite = checkInt();
@@ -46,24 +49,25 @@ void menu() {
                     if(choiceOverwrite == 2) {
                         break;
                     }
-                    v.clear();
+                    vectorNums.clear();
                 }
-                v = randomArray();
+                vectorNums = randomArray();
                 std::cout << "Array: ";
-                for (int i = 0; i < v.size(); ++i) {
-                    std::cout << v[i] << " ";
+                for (int i = 0; i < vectorNums.size(); ++i) {
+                    std::cout << vectorNums[i] << " ";
                 }
                 std::cout << std::endl;
                 break;
             case 3:
-                if (v.empty()) {
+                if (vectorNums.empty()) {
                     std::cout << "Nothing to delete" << std::endl;
                     break;
                 }
-                v.clear();
+                vectorNums.clear();
                 std::cout << "Array is deleted: ";
                 break;
             case 4:
+                addToFile(vectorNums);
                 break;
             case 0:
                 break;

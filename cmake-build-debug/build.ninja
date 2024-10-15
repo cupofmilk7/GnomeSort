@@ -73,6 +73,12 @@ build CMakeFiles/GnomeSort.dir/checkData.cpp.o: CXX_COMPILER__GnomeSort_unscanne
   OBJECT_DIR = CMakeFiles/GnomeSort.dir
   OBJECT_FILE_DIR = CMakeFiles/GnomeSort.dir
 
+build CMakeFiles/GnomeSort.dir/fileFunctions.cpp.o: CXX_COMPILER__GnomeSort_unscanned_Debug /Users/macbookpro15/CLionProjects/GnomeSort/fileFunctions.cpp || cmake_object_order_depends_target_GnomeSort
+  DEP_FILE = CMakeFiles/GnomeSort.dir/fileFunctions.cpp.o.d
+  FLAGS = -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/GnomeSort.dir
+  OBJECT_FILE_DIR = CMakeFiles/GnomeSort.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target GnomeSort
@@ -81,7 +87,7 @@ build CMakeFiles/GnomeSort.dir/checkData.cpp.o: CXX_COMPILER__GnomeSort_unscanne
 #############################################
 # Link the executable GnomeSort
 
-build GnomeSort: CXX_EXECUTABLE_LINKER__GnomeSort_Debug CMakeFiles/GnomeSort.dir/main.cpp.o CMakeFiles/GnomeSort.dir/sort.cpp.o CMakeFiles/GnomeSort.dir/arrayWork.cpp.o CMakeFiles/GnomeSort.dir/checkData.cpp.o
+build GnomeSort: CXX_EXECUTABLE_LINKER__GnomeSort_Debug CMakeFiles/GnomeSort.dir/main.cpp.o CMakeFiles/GnomeSort.dir/sort.cpp.o CMakeFiles/GnomeSort.dir/arrayWork.cpp.o CMakeFiles/GnomeSort.dir/checkData.cpp.o CMakeFiles/GnomeSort.dir/fileFunctions.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7
   OBJECT_DIR = CMakeFiles/GnomeSort.dir
   POST_BUILD = :

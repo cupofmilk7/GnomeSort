@@ -9,4 +9,6 @@ add_executable(GnomeSort main.cpp
         arrayWork.cpp
         checkData.cpp
         checkData.h
-        arrayWork.h)
+        arrayWork.h
+        fileFunctions.cpp
+        fileFunctions.h)
