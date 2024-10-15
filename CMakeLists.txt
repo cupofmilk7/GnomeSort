@@ -3,4 +3,6 @@ project(GnomeSort)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(GnomeSort main.cpp)
+add_executable(GnomeSort main.cpp
+        sort.cpp
+        sort.h)
