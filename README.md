@@ -1,5 +1,5 @@
 hello! this is my second laboratory work on working with algorithm development.
-I have implemented dwarf sorting. there is an opportunity in the program:
+I have implemented gnome sorting. there is an opportunity in the program:
 1. Sort the array
 2. Create a new array (random values)
 3. Delete an array
