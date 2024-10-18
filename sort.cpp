@@ -3,12 +3,16 @@
 
 #include "checkData.h"
 
+// Функция swap(int* num1, int* num2)
+// меняет два числа друг с другом
 void swap(int* num1, int* num2) {
     int temp = *num1;
     *num1 = *num2;
     *num2 = temp;
 }
 
+// Функция sort(std::vector<int>& array) для сортировки
+// есть возможность выбора типа сортировки
 void sort(std::vector<int>& array) {
     std::cout << "1. Ascending, 2. Descending" << std::endl;
     int choice = checkInt();
@@ -38,5 +42,4 @@ void sort(std::vector<int>& array) {
             index--;
         }
     }
-
 }

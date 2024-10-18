@@ -15,6 +15,7 @@ enum addToFile {
     useAnother
 };
 
+// Функция isReservedName(string path), для проверки зарезервированных виндовс названий
 bool isReservedName(string path) {
     try {
         if (!filesystem::is_regular_file(path)) {
@@ -27,6 +28,8 @@ bool isReservedName(string path) {
     return true;
 }
 
+
+// Функция enteringPathToFile() для ввода пути файла
 string enteringPathToFile() {
     cout << "Enter the file name or path to it " << endl;
     string nameOfFile;
@@ -60,6 +63,7 @@ string enteringPathToFile() {
     return nameOfFile;
 }
 
+// Функция openFile() для открытия файла
 fstream openFile() {
     fstream file;
     string path;
@@ -102,6 +106,8 @@ fstream openFile() {
     return file;
 }
 
+
+// Функция addToFile(vector <int>& v) для вывода массива в файл
 void addToFile(vector <int>& v) {
 	fstream file = openFile();
 	if (file.is_open()) {

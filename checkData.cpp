@@ -1,5 +1,6 @@
 #include <iostream>
 
+// Функция checkInt() для проверки ввода целого числа
 int checkInt() {
     int forCheck;
 

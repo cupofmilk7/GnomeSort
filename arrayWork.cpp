@@ -12,6 +12,7 @@
 std::vector<int> randomArray();
 std::vector<int> enterArray();
 
+// Функция menu() для вывда в консоль пунктов меню, а также выполнения этих пунктов
 void menu() {
     std::vector<int> vectorNums;
     int choice = 0;
@@ -85,6 +86,10 @@ void menu() {
     } while (choice != 0);
 }
 
+// Функция randomArray() заполняет массив случайными значениями,
+// также запрашивает размер массива,
+// возвращает этот массив
+
 std::vector<int> randomArray() {
     std::cout << std::endl;
     std::srand(static_cast<unsigned int>(std::time(0)));
@@ -102,6 +107,8 @@ std::vector<int> randomArray() {
     }
     return tempVector;
 }
+
+// Функция enterArray() для ввода значений массива с клавиатуры
 
 std::vector<int> enterArray() {
     std::cout << "Enter an array size: " << std::endl;
